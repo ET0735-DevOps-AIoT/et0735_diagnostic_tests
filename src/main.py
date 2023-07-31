@@ -69,7 +69,7 @@ def main():
     print("press # to test slide switch")  
     print("print * to test IR sensor")
 
-
+    #starting loop to check for key press
     while(True):
         lcd.lcd_clear()
         lcd.lcd_display_string("press any key!", 1)
