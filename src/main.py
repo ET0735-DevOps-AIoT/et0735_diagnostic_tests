@@ -74,7 +74,7 @@ def main():
         lcd.lcd_clear()
         lcd.lcd_display_string("press any key!", 1)
      
-
+        #wait for key
         print("wait for key")
         keyvalue= shared_keypad_queue.get()
 
