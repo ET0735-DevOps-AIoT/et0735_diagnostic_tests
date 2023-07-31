@@ -55,7 +55,7 @@ def main():
     lcd.lcd_display_string("Dignostic Tests", 2)
 
     time.sleep(3)
-
+    #print out all the options
     print("press 0 to test accelerometer")
     print("press 1 to test LED")
     print("press 2 to test potentiometer")
