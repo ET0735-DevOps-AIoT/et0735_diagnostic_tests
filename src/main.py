@@ -43,7 +43,7 @@ def main():
     usonic.init()
     dc_motor.init()
     accelerometer = accel.init()
-
+    #keypad press init
     keypad.init(key_pressed)
     keypad_thread = Thread(target=keypad.get_key)
     keypad_thread.start()
