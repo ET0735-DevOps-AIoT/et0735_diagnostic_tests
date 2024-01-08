@@ -21,8 +21,6 @@ from hal import hal_accelerometer as accel
 shared_keypad_queue = queue.Queue()
 
 
-
-
 #Call back function invoked when any key on keypad is pressed
 def key_pressed(key):
     shared_keypad_queue.put(key)
@@ -55,7 +53,40 @@ def main():
     lcd.lcd_display_string("Dignostic Tests", 2)
 
     time.sleep(3)
+
+    lcd.lcd_clear()
     #print out all the options
+    lcd.lcd_display_string("0-accelerometer", 1)
+    lcd.lcd_display_string("1-LED", 2)
+    time.sleep(1)
+    lcd.lcd_clear()
+
+    lcd.lcd_display_string("2-potentiometer", 1)
+    lcd.lcd_display_string("3-buzzer", 2)
+    time.sleep(1)
+    lcd.lcd_clear()
+
+    lcd.lcd_display_string("4-moist sensor", 1)
+    lcd.lcd_display_string("5-ultrasonic sensor", 2)  
+    time.sleep(1)
+    lcd.lcd_clear()
+
+    lcd.lcd_display_string("6-rfid reader", 1) 
+    lcd.lcd_display_string("7-LDR",2) 
+    time.sleep(1)
+    lcd.lcd_clear()
+
+    lcd.lcd_display_string("8-servo/DC motor", 1) 
+    lcd.lcd_display_string("9-temp/humidity", 2)  
+    time.sleep(1)
+    lcd.lcd_clear()
+
+    lcd.lcd_display_string("#-switch",1 )  
+    lcd.lcd_display_string("*-IR sensor", 2)
+    time.sleep(1)
+    lcd.lcd_clear()
+
+
     print("press 0 to test accelerometer")
     print("press 1 to test LED")
     print("press 2 to test potentiometer")
@@ -178,6 +209,7 @@ def main():
 
 
         time.sleep(1)
+
 
 
 
